@@ -1,0 +1,21 @@
+{
+    "name": "social-media-node-js",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "node ./dist/index.js",
+        "dev": "bun run --watch ./src/index.ts",
+        "build": "tsc"
+    },
+    "dependencies": {
+        "@types/express": "^5.0.0",
+        "@types/morgan": "^1.9.9",
+        "cors": "^2.8.5",
+        "express": "^4.21.1",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.17"
+    }
+}
