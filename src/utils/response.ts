@@ -5,7 +5,11 @@ import ApiResponseWithPagination from '../core/ApiResponseWithPagination';
 export const createResponse = ({
     statusCode = 200,
     message = 'Successfuly!',
-    data = null,
+    data,
+}: {
+    statusCode?: number;
+    message?: string;
+    data?: any;
 }) => {
     return ApiResponse.create(statusCode, message, data);
 };
@@ -15,6 +19,11 @@ export const createResponseWithPagination = ({
     message = 'Successfuly!',
     data = null,
     pagination = {} as PaginagtionParams,
+}: {
+    statusCode?: number;
+    message?: string;
+    data?: any;
+    pagination?: PaginagtionParams;
 }) => {
     return ApiResponseWithPagination.createResponse(
         statusCode,

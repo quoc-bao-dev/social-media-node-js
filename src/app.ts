@@ -3,8 +3,14 @@ import morgan from 'morgan';
 import cors from 'cors';
 import Routes from './routes';
 import errorHandler from './middlewares/errorHandler';
+import mongoose from 'mongoose';
+import { config } from './config/config';
 
 const app = express();
+
+mongoose.connect(config.MONGODB_URI).then(() => {
+    console.log('Connected to MongoDB');
+});
 
 // app.use(express.static('public'));
 app.use(
